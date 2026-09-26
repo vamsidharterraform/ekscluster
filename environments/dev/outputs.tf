@@ -49,5 +49,5 @@ output "eks_cluster_arn" {
 
 output "eks_node_groups" {
   description = "EKS managed node groups"
-  value       = module.eks.node_groups
+  value       = var.node_groups
 }
