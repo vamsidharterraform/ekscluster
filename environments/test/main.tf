@@ -1,12 +1,12 @@
 module "vpc" {
-  source = "../../modules/vpc"
+  source = "git::https://github.com/vamsidharterraform/vpcmodule.git?ref=main"
 
   environment = var.environment
   vpc_cidr    = var.vpc_cidr
 }
 
 module "eks" {
-  source = "../../modules/eks"
+  source = "git::https://github.com/vamsidharterraform/eksmodule.git//eks?ref=main"
 
   cluster_name    = var.cluster_name
   cluster_version = var.cluster_version
