@@ -1,0 +1,83 @@
+# ============================================================
+# Terraform
+# ============================================================
+
+# Terraform working directories
+**/.terraform/
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+terraform.tfstate.d/
+
+# Terraform plan files
+*.tfplan
+*.plan
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# Terraform override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+
+# ============================================================
+# Terraform Variables
+# ============================================================
+
+# Ignore variable files by default
+*.tfvars
+*.tfvars.json
+
+# Allow environment-specific non-sensitive tfvars
+!dev/terraform.tfvars
+!test/terraform.tfvars
+
+
+# ============================================================
+# Terraform CLI Configuration
+# ============================================================
+
+.terraformrc
+terraform.rc
+
+
+# ============================================================
+# Secrets / Credentials
+# ============================================================
+
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+.aws/
+aws-credentials
+credentials
+
+
+# ============================================================
+# IDE
+# ============================================================
+
+.vscode/
+.idea/
+
+*.swp
+*.swo
+*~
+
+
+# ============================================================
+# OS
+# ============================================================
+
+.DS_Store
+Thumbs.db
+Desktop.ini
