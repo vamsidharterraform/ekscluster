@@ -1,0 +1,27 @@
+name: cluster_from_github_test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    runs-on: [self-hosted, linux, x64]
+
+    defaults:
+      run:
+        working-directory: environments/test
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Terraform Version
+        run: terraform version
+
+      - name: Terraform Format
+        run: terraform fmt -check
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Validate
