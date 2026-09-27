@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  terraform:
+
+  terraform-plan:
     runs-on: [self-hosted, linux, x64]
 
     defaults:
@@ -29,6 +30,21 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan
+
+  terraform-apply:
+    needs: terraform-plan
+    runs-on: [self-hosted, linux, x64]
+
+    defaults:
+      run:
+        working-directory: environments/dev
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Terraform Init
+        run: terraform init
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
