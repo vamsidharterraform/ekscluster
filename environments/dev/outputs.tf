@@ -36,6 +36,10 @@ output "eks_cluster_version" {
   description = "EKS Kubernetes version"
   value       = module.eks.cluster_version
 }
+output "cluster_nodegroup_version" {
+  description = "EKS node group Kubernetes version"
+  value       = module.eks.cluster_nodegroup_version
+}
 
 output "eks_cluster_arn" {
   description = "ARN of the EKS cluster"
