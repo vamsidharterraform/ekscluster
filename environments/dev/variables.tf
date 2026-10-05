@@ -1,6 +1,6 @@
 variable "environment" {
   description = "eks environment"
-  type = string
+  type        = string
 }
 # variable "cluster_version" {
 #   description = "EKS cluster version"
@@ -10,13 +10,11 @@ variable "environment" {
 variable "cluster_version" {
   description = "Kubernetes version"
   type        = string
-  default     = "1.34"
 }
 
 variable "cluster_nodegroup_version" {
   description = "nodegroup Kubernetes version"
   type        = string
-  default     = "1.34"
 }
 
 variable "node_groups" {
