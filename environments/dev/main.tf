@@ -14,6 +14,7 @@ module "eks" {
 
   cluster_name    = var.cluster_name
   cluster_version = var.cluster_version
+  cluster_nodegroup_version = var.cluster_nodegroup_version
   environment     = var.environment
   vpc_id          = module.vpc.vpc_id
 

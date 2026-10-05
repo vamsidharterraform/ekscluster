@@ -1,6 +1,6 @@
 environment     = "dev"
 cluster_name    = "dev-app-cluster"
-cluster_version = "1.33"
+# cluster_version = "1.33"
 
 vpc_cidr = "10.10.0.0/16"
 
