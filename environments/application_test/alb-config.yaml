@@ -1,0 +1,9 @@
+apiVersion: gateway.k8s.aws/v1
+kind: LoadBalancerConfiguration
+metadata:
+  name: nginx-alb-config
+  namespace: test
+spec:
+  scheme: internet-facing
+  defaultTargetGroupConfiguration:
+    name: nginx-tg-config

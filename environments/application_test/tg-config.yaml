@@ -1,0 +1,8 @@
+apiVersion: gateway.k8s.aws/v1
+kind: TargetGroupConfiguration
+metadata:
+  name: nginx-tg-config
+  namespace: test
+spec:
+  defaultConfiguration:
+    targetType: ip
